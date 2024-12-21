@@ -11,7 +11,7 @@ import re
 
 class DiscordTime(kp.Plugin):
     DEFAULT_ITEM_LABEL = 'DiscordTime:'
-    DEFAULT_KEYWORD = "dt"
+    DEFAULT_KEYWORD = "dtime"
     ITEMCAT_VAR = kp.ItemCategory.USER_BASE + 1
     ITEMCAT_ERR = kp.ItemCategory.USER_BASE + 2
     TIME_ONLY_PATTERN = re.compile(r"^(\d{2}):(\d{2})$")
@@ -40,7 +40,7 @@ class DiscordTime(kp.Plugin):
                 short_desc="Generate discord timestamp",
                 target=self.DEFAULT_KEYWORD,
                 args_hint=kp.ItemArgsHint.REQUIRED,
-                hit_hint=kp.ItemHitHint.NOARGS)])
+                hit_hint=kp.ItemHitHint.KEEPALL)])
 
     def on_suggest(self, user_input, items_chain):
         if not user_input:
