@@ -1,0 +1,3 @@
+[submodule "libs/arrow"]
+	path = libs/arrow
+	url = https://github.com/arrow-py/arrow.git
