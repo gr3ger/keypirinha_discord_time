@@ -40,7 +40,7 @@ class DiscordTime(kp.Plugin):
                 short_desc="Generate discord timestamp",
                 target=self.DEFAULT_KEYWORD,
                 args_hint=kp.ItemArgsHint.REQUIRED,
-                hit_hint=kp.ItemHitHint.KEEPALL)])
+                hit_hint=kp.ItemHitHint.NOARGS)])
 
     def on_suggest(self, user_input, items_chain):
         if not user_input:
